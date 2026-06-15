@@ -111,7 +111,7 @@ for i in range(3):
         mejor_vendedor = i + 1
     
 print(f"El vendedor con mayor total de ventas es el {mejor_vendedor}")
-print(f"Ttotal mayor: ${mayor_total}")
+print(f"total mayor: ${mayor_total}")
 
 
 
