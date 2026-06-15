@@ -41,6 +41,29 @@ Una autopista instaló sensores para registrar la velocidad de los vehículos y 
 - Orden y claridad del código (5 pts)
 
 ---
+velocidades = []
+for i in range(5): 
+    velocidad = int(input(f"ingresa la velocidad {i+1}: "))
+    velocidades.append(velocidad)
+promedio = sum(velocidades) / len(velocidades)
+
+maxima = max(velocidades)
+
+print(f"Velocidad promedio: {promedio:2.f} km/h)
+print(f"Velocidad maxima: {maxima} km/h)
+
+dentro_limite = True
+
+for velocidad in velocidades: 
+    if velocidad < 60 or velocidad > 120:
+        dentro_limite = False
+    if velocidad > 140 or velocidad < 20:
+        print("Advertencia velocidad peligrosa")
+
+if dentro_limite: 
+    print("Todas la velocidades estan dentro del limite")
+else:
+    print("hay velocidades fuera del limite")
 
 ## Problema 2: Registro de Ventas de una Tienda (35 pts)
 
@@ -62,6 +85,35 @@ Una pequeña tienda registra las ventas diarias de 3 vendedores durante 3 días 
 - Claridad en mensajes y formato (5 pts)
 
 ---
+ventas = []
+
+for i in range(3):
+    fila = []
+
+    for j in range(3):}
+        monto = int(input(f"ingrese venta del vendedor {i+1}, dia {j+1}: "))
+        fila.append(monto)
+    ventas.append(fila)
+
+mayor_total = 0
+mejor_vendedor = 0
+
+for i in range(3):
+    total = sum(ventas[i])
+    
+    print(f"total de vntas del vendedor {i+1}: ${total})
+
+    if total < 30000:
+        print("Alerta: bajo desempeño")
+
+    if total > mayor_total:}
+        mayor_total = total
+        mejor_vendedor = i + 1
+    
+print(f"El vendedor con mayor total de ventas es el {mejor_vendedor}")
+print(f"Ttotal mayor: ${mayor_total}")
+
+
 
 ## Problema 3: Sistema de Descuento en Supermercado (20 pts)
 
@@ -79,3 +131,23 @@ Un supermercado aplica descuentos especiales a sus clientes. Para acceder al des
 - Uso correcto de operadores lógicos (10 pts)
 - Validación de condiciones y entrada de datos (5 pts)
 - Claridad de la salida (5 pts)
+
+edad = int(input("Ingrese su edad"))
+tarjeta = input("¿tiene tarjeta de socio? (si/no: ")
+monto = int(input("ingrese el monto total de la compra: "))
+
+if monto > 10000 and (edad > 60 or tarjeta == "si"): 
+    descuento = monto * 0.15
+    total_final = monto - descuento
+
+    print("usted tiene descuento en un 15%")
+    print(f"descuento: ${descuento}")
+    print(f"total a pagar: ${total_final})
+else: 
+    print("no califica para el descuento)
+    print(f"total a pagar: ${monto}")
+
+
+
+
+PROFE NO LEI BIEN Y LO ESCRIBI AQUI VOY A COPIAR Y PEGAR, NO ESTOY COPIANDO:(
